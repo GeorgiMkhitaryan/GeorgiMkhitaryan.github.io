@@ -8,14 +8,36 @@ body{
   background:var(--bg); color:var(--text); font-family:var(--mono);
   font-size:14px; line-height:1.65; padding:24px 16px;
   -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(70% 45% at 50% 0%, rgba(59,230,255,.07), transparent 72%),
+    radial-gradient(45% 32% at 88% 10%, rgba(123,92,255,.06), transparent 72%);
+  background-attachment:fixed;
 }
 a{ color:var(--accent); text-decoration:none; border-bottom:1px solid transparent; }
 a:hover{ border-bottom-color:var(--accent); }
 
 /* terminal shell */
 .term{
+  position:relative;
   max-width:900px; margin:0 auto; background:var(--surface);
   border:1px solid var(--line); border-radius:8px; overflow:hidden;
+  box-shadow:0 0 0 1px rgba(59,230,255,.04), 0 24px 70px rgba(0,0,0,.55);
+}
+.term::after{
+  content:''; position:absolute; inset:0; pointer-events:none; z-index:3;
+  background:repeating-linear-gradient(0deg, transparent 0 3px, rgba(255,255,255,.011) 3px 4px);
+}
+.term-body{ position:relative; z-index:2; }
+
+/* aurora glow behind the header */
+.hero-wrap{ position:relative; }
+.hero-wrap::before{
+  content:''; position:absolute; z-index:-1;
+  top:-70px; left:-60px; width:420px; height:290px; pointer-events:none;
+  background:
+    radial-gradient(46% 54% at 26% 30%, rgba(59,230,255,.16), transparent 70%),
+    radial-gradient(48% 56% at 52% 34%, rgba(123,92,255,.13), transparent 72%);
+  filter:blur(42px);
 }
 .term-bar{
   display:flex; align-items:center; gap:8px;
@@ -80,11 +102,27 @@ a:hover{ border-bottom-color:var(--accent); }
 .project .meta{ color:var(--muted); font-size:12px; margin-bottom:10px; }
 
 /* experience */
-.job{ margin-bottom:22px; }
-.job-head{ margin-bottom:8px; }
-.job-title{ font-size:14px; font-weight:700; }
-.job-title small{ font-weight:400; color:var(--muted); font-size:12px; }
-.job-dates{ color:var(--muted); font-size:12px; }
+.timeline{ position:relative; padding-left:24px; }
+.timeline::before{
+  content:''; position:absolute; left:4px; top:8px; bottom:10px;
+  width:1px; background:linear-gradient(180deg, var(--accent), var(--line) 22%, var(--line));
+  opacity:.65;
+}
+.job{ position:relative; margin-bottom:26px; }
+.job:last-child{ margin-bottom:0; }
+.job::before{
+  content:''; position:absolute; left:-24px; top:8px;
+  width:9px; height:9px; border-radius:50%;
+  background:var(--surface); border:1px solid var(--line);
+}
+.job:first-child::before{ background:var(--accent); border-color:var(--accent); }
+.job-head{ margin-bottom:9px; }
+.job-title{ font-size:14px; font-weight:400; color:var(--muted); }
+.job-title b{
+  color:var(--accent); font-weight:700; font-size:15px; letter-spacing:.01em;
+}
+.job-title small{ font-weight:400; color:var(--muted); font-size:12px; opacity:.8; }
+.job-dates{ color:var(--text); font-size:12px; white-space:nowrap; opacity:.85; }
 
 /* stack */
 .stack-grid{ display:flex; flex-direction:column; gap:9px; }
@@ -121,6 +159,14 @@ a:hover{ border-bottom-color:var(--accent); }
   .term{ border:0; background:#fff; max-width:none; border-radius:0; }
   .term-body{ padding:0; }
   .term-bar, .btn-download, .caret, .status{ display:none; }
+  .term::after, .hero-wrap::before{ display:none; }
+  .term{ box-shadow:none; }
+  .timeline::before{ background:#999; opacity:1; }
+  .job::before{ background:#fff; border-color:#666; }
+  .job:first-child::before{ background:#666; border-color:#666; }
+  .job-title{ color:#000; }
+  .job-title b{ color:#000; }
+  .job-dates{ color:#000; }
   .prompt{ color:#000; border-bottom:1px solid #999; }
   .kicker, .stack-key, .bullets li::before{ color:#000; }
   a{ color:#000; }

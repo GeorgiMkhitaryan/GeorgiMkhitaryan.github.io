@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Georgi Mkhitaryan — Software Engineer</title>
-<meta name="description" content="Software engineer, 7 yrs — LLM apps, realtime backends, systems integration. Yerevan.">
-<meta property="og:title" content="Georgi Mkhitaryan — Software Engineer">
-<meta property="og:description" content="LLM apps, realtime backends, systems integration.">
+<title>Georgi Mkhitaryan — Realtime &amp; Game Engineer</title>
+<meta name="description" content="Software engineer, 7 yrs — authoritative multiplayer servers, Unity→WebGL, GLSL, high-load iGaming platforms. Yerevan.">
+<meta property="og:title" content="Georgi Mkhitaryan — Realtime &amp; Game Engineer">
+<meta property="og:description" content="Authoritative multiplayer servers, Unity→WebGL, GLSL shaders, high-load iGaming platforms.">
 <meta property="og:type" content="profile">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +20,8 @@
 
   <div class="term-body">
 
-    <header>
-      <p class="kicker">// software engineer · 7 yrs · llm apps · realtime backends</p>
+    <header class="hero-wrap">
+      <p class="kicker">// software engineer · 7 yrs · realtime multiplayer · webgl · game backends</p>
 
       <div class="hero">
         <img class="hero-photo" src="assets/photo.png" alt="Georgi Mkhitaryan" width="600" height="600">
@@ -47,17 +47,17 @@
 
     <section class="section">
       <h2 class="prompt">summary $ head -n 1</h2>
-      <p class="summary">Seven years building systems that hold state, talk to messy external services and stay up under load — authoritative realtime servers, hardware↔cloud protocol bridges, live payment flows. I now build on top of LLMs: Python services, prompt design and tool-calling wired into real business systems.</p>
+      <p class="summary">Seven years building realtime systems that hold state under load — authoritative multiplayer servers, 3D/WebGL products profiled down to low-end hardware, and regulated high-load iGaming platforms. I care about the frame budget, the reconnect path, and what the server does when a client lies.</p>
     </section>
 
     <section class="section">
-      <h2 class="prompt">llm-engineering $ ls -la</h2>
+      <h2 class="prompt">realtime-and-graphics $ ls -la</h2>
       <ul class="bullets">
-        <li>LLM-backed features in Python against OpenAI / Anthropic / Gemini APIs — system-prompt structure, few-shot framing, and prompt iteration driven by failure cases, not vibes.</li>
-        <li>Tool / function calling: expose typed tools to the model, validate every argument against a schema, retry on malformed output, fall back to a deterministic path when the model goes off-script.</li>
-        <li>Model output is untrusted input. Schema validation and guardrails before anything touches money, user data or a downstream system — the same discipline I apply to payment and charger traffic.</li>
-        <li>Cost and latency are budgets, not afterthoughts: measure per call, cap, cache, then tune prompt or model choice — the habit comes from years of holding a 16 ms frame budget.</li>
-        <li>Currently going deep on Vertex AI, Gemini and RAG (embeddings, vector search, MCP-style tool orchestration) to take this from single-call features to full agent workflows.</li>
+        <li>Authoritative realtime servers on Colyseus / WebSockets — many concurrent stateful sessions, server-side validation of every client action, state recovery after disconnects. The client is never trusted.</li>
+        <li>Unity→WebGL products shipped to production with custom GLSL shaders, profiled down to low-end devices — draw calls, memory and latency held inside a hard budget.</li>
+        <li>Three.js / WebGL interactive apps and product visualisations, tuned to stay smooth across a wide device range.</li>
+        <li>Performance is a budget, not a polish pass: years of holding a 16 ms frame, profiling before optimising, and cutting the cost that actually shows up in the trace.</li>
+        <li>Regulated, money-critical platforms at an iGaming company — audit trail, server authority and no silent failures, on systems real money moves through.</li>
       </ul>
     </section>
 
@@ -66,81 +66,93 @@
       <div class="project">
         <h3><a href="https://ev1000.net" rel="noopener">ev1000.net</a></h3>
         <p class="meta">full-stack · solo, end to end</p>
-        <p>White-label EV-charging platform (CSMS) for a client, built solo end to end: landing site, React Native app (iOS + Android), backend, charger↔cloud comms over OCPP 1.6J, and payment provider integration — auth, retries, reconnection and reconciliation on live money flows.</p>
+        <p>White-label EV-charging platform (CSMS) for a client, built solo end to end: landing site, React Native app (iOS + Android), backend, charger↔cloud comms over OCPP 1.6J, and payment provider integration — auth, retries, reconnection and reconciliation on live money flows. The same long-lived-connection and state-machine discipline as a game server, pointed at hardware.</p>
       </div>
     </section>
 
     <section class="section">
       <h2 class="prompt">experience $ git log --oneline</h2>
 
-      <div class="job">
-        <div class="job-head">
-          <div class="job-title">Senior Software Engineer · SoftConstruct <small>iGaming tech · regulated, high-load</small></div>
-          <div class="job-dates">2022 — now</div>
-        </div>
-        <ul class="bullets">
-          <li>Built authoritative realtime backends on Colyseus / WebSockets — many concurrent stateful sessions, server-side validation of every client action, recovery after disconnects.</li>
-          <li>Integrated hardware↔cloud over OCPP 1.6J: long-lived connections, protocol state machines, retries and traceable message logs.</li>
-          <li>Shipped 3D/WebGL products (Unity→WebGL + custom GLSL) and profiled them down to low-end devices — latency and memory work under a hard budget.</li>
-        </ul>
-      </div>
+      <div class="timeline">
 
-      <div class="job">
-        <div class="job-head">
-          <div class="job-title">Software Engineer · AiMit</div>
-          <div class="job-dates">2021 — 2022</div>
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">Senior Software Engineer · <b>SoftConstruct</b> <small>iGaming tech · regulated, high-load</small></div>
+            <div class="job-dates">2022 — now</div>
+          </div>
+          <ul class="bullets">
+            <li>Built authoritative realtime backends on Colyseus / WebSockets — many concurrent stateful sessions, server-side validation of every client action, recovery after disconnects.</li>
+            <li>Shipped 3D/WebGL products (Unity→WebGL + custom GLSL) and profiled them down to low-end devices — latency and memory work under a hard budget.</li>
+            <li>Integrated hardware↔cloud over OCPP 1.6J: long-lived connections, protocol state machines, retries and traceable message logs.</li>
+          </ul>
         </div>
-        <ul class="bullets">
-          <li>Built and profiled front-ends in modern JS; tuned interaction latency across the client/network boundary.</li>
-        </ul>
-      </div>
 
-      <div class="job">
-        <div class="job-head">
-          <div class="job-title">Software Engineer · NWSLAB</div>
-          <div class="job-dates">2020 — 2021</div>
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">Software Engineer · <b>AiMit</b></div>
+            <div class="job-dates">2021 — 2022</div>
+          </div>
+          <ul class="bullets">
+            <li>Built and profiled front-ends in modern JS; tuned interaction latency across the client/network boundary.</li>
+          </ul>
         </div>
-        <ul class="bullets">
-          <li>High-performance web platforms with realtime mechanics across client, network and state; shared design system + modular architecture reused across products.</li>
-        </ul>
-      </div>
 
-      <div class="job">
-        <div class="job-head">
-          <div class="job-title">Three.js Developer · M&amp;D Systems <small>parallel · contract</small></div>
-          <div class="job-dates">2020 — 2021</div>
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">Software Engineer · <b>NWSLAB</b></div>
+            <div class="job-dates">2020 — 2021</div>
+          </div>
+          <ul class="bullets">
+            <li>High-performance web platforms with realtime mechanics across client, network and state; shared design system + modular architecture reused across products.</li>
+          </ul>
         </div>
-        <ul class="bullets">
-          <li>Interactive Three.js web/mobile apps and product visualisations, tuned smooth across devices.</li>
-        </ul>
-      </div>
 
-      <div class="job">
-        <div class="job-head">
-          <div class="job-title">Full Stack Developer · Arakssys</div>
-          <div class="job-dates">2018 — 2020</div>
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">Three.js Developer · <b>M&amp;D Systems</b> <small>parallel · contract</small></div>
+            <div class="job-dates">2020 — 2021</div>
+          </div>
+          <ul class="bullets">
+            <li>Interactive Three.js web/mobile apps and product visualisations, tuned smooth across devices.</li>
+          </ul>
         </div>
-        <ul class="bullets">
-          <li>Full-stack delivery of 3D-driven interfaces; owned concept → implementation → launch.</li>
-        </ul>
+
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">Full Stack Developer · <b>Arakssys</b></div>
+            <div class="job-dates">2018 — 2020</div>
+          </div>
+          <ul class="bullets">
+            <li>Full-stack delivery of 3D-driven interfaces; owned concept → implementation → launch.</li>
+          </ul>
+        </div>
+
       </div>
+    </section>
+
+    <section class="section">
+      <h2 class="prompt">llm-engineering $ ls -la</h2>
+      <ul class="bullets">
+        <li>LLM-backed features in Python against OpenAI / Anthropic / Gemini APIs — system-prompt structure, few-shot framing, and prompt iteration driven by failure cases, not vibes.</li>
+        <li>Tool / function calling: expose typed tools to the model, validate every argument against a schema, retry on malformed output, fall back to a deterministic path when the model goes off-script.</li>
+        <li>Model output is untrusted input — the same stance as a game client. Schema validation and guardrails before anything touches money, user data or a downstream system.</li>
+        <li>Cost and latency measured, capped and cached per call; going deeper on Vertex AI, Gemini and RAG for agent-style workflows.</li>
+      </ul>
     </section>
 
     <section class="section">
       <h2 class="prompt">stack $ cat package.json</h2>
       <div class="stack-grid">
-        <div class="stack-row"><span class="stack-key">Lang</span> Python · TypeScript · JavaScript</div>
+        <div class="stack-row"><span class="stack-key">Realtime</span> Colyseus · WebSockets · authoritative servers · state sync · reconnect &amp; recovery</div>
+        <div class="stack-row"><span class="stack-key">Graphics</span> Unity→WebGL · Three.js · WebGL · GLSL shaders · performance profiling</div>
+        <div class="stack-row"><span class="stack-key">Lang</span> TypeScript · JavaScript · Python</div>
+        <div class="stack-row"><span class="stack-key">Backend</span> Node · Nest · FastAPI · REST · WebSockets</div>
         <div class="stack-row"><span class="stack-key">AI</span> LLM APIs (Gemini · OpenAI · Anthropic) · prompt engineering · tool/function calling · structured outputs</div>
-        <div class="stack-row"><span class="stack-key">Backend</span> FastAPI · Node · Nest · REST · WebSockets · Colyseus</div>
         <div class="stack-row"><span class="stack-key">Integration</span> OCPP 1.6J · payment providers · OAuth · webhooks</div>
         <div class="stack-row"><span class="stack-key">Ops</span> Docker · CI/CD · Linux · logging &amp; profiling</div>
         <div class="stack-row"><span class="stack-key">Front</span> React · React Native · Redux · RxJS</div>
+        <div class="stack-row"><span class="stack-key">Also</span> Web3 · modular UI architecture</div>
       </div>
-    </section>
-
-    <section class="section">
-      <h2 class="prompt">also $ ls</h2>
-      <p class="summary">Three.js · WebGL · GLSL shaders · Unity→WebGL · Web3 · performance profiling · modular UI architecture</p>
     </section>
 
     <section class="section">
