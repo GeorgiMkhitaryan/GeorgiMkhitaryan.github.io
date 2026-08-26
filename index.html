@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Georgi Mkhitaryan — Software Engineer</title>
+<meta name="description" content="Software engineer, 7 yrs — LLM apps, realtime backends, systems integration. Yerevan.">
+<meta property="og:title" content="Georgi Mkhitaryan — Software Engineer">
+<meta property="og:description" content="LLM apps, realtime backends, systems integration.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="term">
+  <div class="term-bar"><i></i><i></i><i></i><span>georgi@yerevan:~$ cat cv.md</span></div>
+
+  <div class="term-body">
+
+    <header>
+      <p class="kicker">// software engineer · 7 yrs · llm apps · realtime backends</p>
+
+      <div class="hero">
+        <img class="hero-photo" src="assets/photo.png" alt="Georgi Mkhitaryan" width="600" height="600">
+        <div>
+          <h1 class="name">GEORGI MKHITARYAN<span class="caret"></span></h1>
+
+          <ul class="contacts">
+            <li class="contact"><span>@</span> <a id="mail" href="#">goshmkhitaryan@gmail.com</a></li>
+            <li class="contact"><span>tel</span> <a id="tel" href="#">+374 95 266666</a></li>
+            <li class="contact"><span>loc</span> Yerevan · GMT+4</li>
+            <li class="contact"><span>in</span> <a href="https://linkedin.com/in/gosh-mkhitaryan" rel="noopener">linkedin.com/in/gosh-mkhitaryan</a></li>
+            <li class="contact"><span>gh</span> <a href="https://github.com/GeorgiMkhitaryan" rel="noopener">github.com/GeorgiMkhitaryan</a></li>
+            <li class="contact"><span>web</span> <a href="https://ev1000.net" rel="noopener">ev1000.net</a></li>
+          </ul>
+
+          <div class="hero-actions">
+            <span class="status">available · on-site / hybrid</span>
+            <a class="btn-download" href="assets/Georgi_Mkhitaryan_CV.pdf" download>[ download cv.pdf ]</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="prompt">summary $ head -n 1</h2>
+      <p class="summary">Seven years building systems that hold state, talk to messy external services and stay up under load — authoritative realtime servers, hardware↔cloud protocol bridges, live payment flows. I now build on top of LLMs: Python services, prompt design and tool-calling wired into real business systems.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="prompt">llm-engineering $ ls -la</h2>
+      <ul class="bullets">
+        <li>LLM-backed features in Python against OpenAI / Anthropic / Gemini APIs — system-prompt structure, few-shot framing, and prompt iteration driven by failure cases, not vibes.</li>
+        <li>Tool / function calling: expose typed tools to the model, validate every argument against a schema, retry on malformed output, fall back to a deterministic path when the model goes off-script.</li>
+        <li>Model output is untrusted input. Schema validation and guardrails before anything touches money, user data or a downstream system — the same discipline I apply to payment and charger traffic.</li>
+        <li>Cost and latency are budgets, not afterthoughts: measure per call, cap, cache, then tune prompt or model choice — the habit comes from years of holding a 16 ms frame budget.</li>
+        <li>Currently going deep on Vertex AI, Gemini and RAG (embeddings, vector search, MCP-style tool orchestration) to take this from single-call features to full agent workflows.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="prompt">projects $ cat flagship.md</h2>
+      <div class="project">
+        <h3><a href="https://ev1000.net" rel="noopener">ev1000.net</a></h3>
+        <p class="meta">full-stack · solo, end to end</p>
+        <p>White-label EV-charging platform (CSMS) for a client, built solo end to end: landing site, React Native app (iOS + Android), backend, charger↔cloud comms over OCPP 1.6J, and payment provider integration — auth, retries, reconnection and reconciliation on live money flows.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="prompt">experience $ git log --oneline</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Senior Software Engineer · SoftConstruct <small>iGaming tech · regulated, high-load</small></div>
+          <div class="job-dates">2022 — now</div>
+        </div>
+        <ul class="bullets">
+          <li>Built authoritative realtime backends on Colyseus / WebSockets — many concurrent stateful sessions, server-side validation of every client action, recovery after disconnects.</li>
+          <li>Integrated hardware↔cloud over OCPP 1.6J: long-lived connections, protocol state machines, retries and traceable message logs.</li>
+          <li>Shipped 3D/WebGL products (Unity→WebGL + custom GLSL) and profiled them down to low-end devices — latency and memory work under a hard budget.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Software Engineer · AiMit</div>
+          <div class="job-dates">2021 — 2022</div>
+        </div>
+        <ul class="bullets">
+          <li>Built and profiled front-ends in modern JS; tuned interaction latency across the client/network boundary.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Software Engineer · NWSLAB</div>
+          <div class="job-dates">2020 — 2021</div>
+        </div>
+        <ul class="bullets">
+          <li>High-performance web platforms with realtime mechanics across client, network and state; shared design system + modular architecture reused across products.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Three.js Developer · M&amp;D Systems <small>parallel · contract</small></div>
+          <div class="job-dates">2020 — 2021</div>
+        </div>
+        <ul class="bullets">
+          <li>Interactive Three.js web/mobile apps and product visualisations, tuned smooth across devices.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Full Stack Developer · Arakssys</div>
+          <div class="job-dates">2018 — 2020</div>
+        </div>
+        <ul class="bullets">
+          <li>Full-stack delivery of 3D-driven interfaces; owned concept → implementation → launch.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="prompt">stack $ cat package.json</h2>
+      <div class="stack-grid">
+        <div class="stack-row"><span class="stack-key">Lang</span> Python · TypeScript · JavaScript</div>
+        <div class="stack-row"><span class="stack-key">AI</span> LLM APIs (Gemini · OpenAI · Anthropic) · prompt engineering · tool/function calling · structured outputs</div>
+        <div class="stack-row"><span class="stack-key">Backend</span> FastAPI · Node · Nest · REST · WebSockets · Colyseus</div>
+        <div class="stack-row"><span class="stack-key">Integration</span> OCPP 1.6J · payment providers · OAuth · webhooks</div>
+        <div class="stack-row"><span class="stack-key">Ops</span> Docker · CI/CD · Linux · logging &amp; profiling</div>
+        <div class="stack-row"><span class="stack-key">Front</span> React · React Native · Redux · RxJS</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="prompt">also $ ls</h2>
+      <p class="summary">Three.js · WebGL · GLSL shaders · Unity→WebGL · Web3 · performance profiling · modular UI architecture</p>
+    </section>
+
+    <section class="section">
+      <h2 class="prompt">misc $ ls</h2>
+      <div class="two-col">
+        <div>
+          <h4>education</h4>
+          <ul>
+            <li>JavaScript &amp; React.js — <em>LevelUp '18</em></li>
+            <li>Web Programming — <em>TT-Soft '17</em></li>
+            <li>Computer Science — <em>YSC Informatics '15</em></li>
+          </ul>
+        </div>
+        <div>
+          <h4>languages</h4>
+          <ul>
+            <li>Armenian — <em>native</em></li>
+            <li>Russian — <em>fluent</em></li>
+            <li>English — <em>professional (B2+)</em></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>georgi mkhitaryan</span>
+      <span>2026</span>
+    </footer>
+
+  </div>
+</main>
+
+<script>
+(function () {
+  var u = 'goshmkhitaryan', d = 'gmail.com';
+  var cc = '+374', n = '95266666';
+  var m = document.getElementById('mail');
+  var t = document.getElementById('tel');
+  if (m) m.href = 'mai' + 'lto:' + u + '@' + d;
+  if (t) t.href = 'tel:' + cc + n;
+})();
+</script>
+
+</body>
+</html>
