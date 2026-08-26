@@ -40,8 +40,8 @@ a:hover{ border-bottom-color:var(--accent); }
   border:1px solid var(--line); flex:none; margin-bottom:16px;
 }
 .name{
-  font-size:26px; font-weight:700; letter-spacing:.06em;
-  line-height:1.15; margin-bottom:14px;
+  font-size:23px; font-weight:700; letter-spacing:.04em;
+  line-height:1.2; margin-bottom:14px;
 }
 .contacts{ list-style:none; margin-bottom:16px; }
 .contact{ font-size:13px; color:var(--text); padding:1px 0; overflow-wrap:anywhere; }
