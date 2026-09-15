@@ -1,0 +1,1 @@
+import{j as i}from"./index-dkP5OCOJ.js";import{a1 as m}from"./index-BibOoZOK.js";const c=({url:t,name:o,...e})=>{const s=m(t);return i.jsx("primitive",{name:o||"",...e,object:s.scene},t+e.position+e.scale)};export{c as G};
